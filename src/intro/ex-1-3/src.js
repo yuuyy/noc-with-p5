@@ -28,7 +28,7 @@ function sketch(p) {
                     }
                 }
             }()));
-            console.log(directions);
+
             var d = directions[Math.floor(Math.random() * directions.length)];
             if (d === "right") {
                 this.x++;
