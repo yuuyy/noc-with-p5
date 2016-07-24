@@ -11,17 +11,19 @@ function sketch(p) {
 
         var defaultDirections = ["right", "left", "up", "down"];
         this.step = function() {
+            var _x = this.x;
+            var _y = this.y;
             var directions = defaultDirections.concat((function() {
-                var dx = Math.abs(p.mouseX - this.x);
-                var dy = Math.abs(p.mouseY - this.y);
+                var dx = Math.abs(p.mouseX - _x);
+                var dy = Math.abs(p.mouseY - _y);
                 if (dx > dy) {
-                    if (p.mouseX > this.x) {
+                    if (p.mouseX > _x) {
                         return ["right", "right", "right", "right"];
                     } else {
                         return ["left", "left", "left", "left"];
                     }
                 } else {
-                    if (p.mouseY > this.y) {
+                    if (p.mouseY > _y) {
                         return ["down", "down", "down", "down"];
                     } else {
                         return ["up", "up", "up", "up"];
@@ -44,6 +46,7 @@ function sketch(p) {
 
     var w;
     p.setup = function() {
+        p.createCanvas(window.innerWidth, window.innerHeight);
         p.background(255);
         w = new Walker();
     };
