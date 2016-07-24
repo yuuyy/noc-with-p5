@@ -8,9 +8,9 @@ function sketch(p) {
         var height = window.innerHeight;
         p.createCanvas(width, height);
         p.background(0);
-        var sd = 60;
+        var sd = 100;
         xDistribution = new gaussian(width/2, sd*sd);
-        yDistribution = new gaussian(width/3, sd*sd);
+        yDistribution = new gaussian(height/2, sd*sd);
         colorDistribution = new gaussian(120, sd*sd);
     };
 
@@ -23,7 +23,7 @@ function sketch(p) {
 
         p.noStroke();
         p.fill(red, green, blue, 10);
-        p.ellipse(x, y, 10, 10);
+        p.ellipse(x, y, 15, 15);
     };
 }
 
