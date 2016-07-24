@@ -26,4 +26,7 @@ function eachSrc(ignores, callback) {
     });
 }
 
-module.exports = eachSrc;
+module.exports = {
+    'eachSrc': eachSrc,
+    'makeDestinationPath': makeDestinationPath
+};

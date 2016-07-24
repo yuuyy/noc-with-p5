@@ -4,7 +4,7 @@ var util = require('util');
 
 var Mustache = require('mustache');
 
-var eachSrc = require('./each-src');
+var eachSrc = require('./build-util').eachSrc;
 
 var templatePath = path.join(__dirname,
     util.format('..%stemplate%st.mustache', path.sep, path.sep));

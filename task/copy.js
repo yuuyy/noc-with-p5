@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var eachSrc = require('./each-src');
+var eachSrc = require('./build-util').eachSrc;
 
 function ignoreFunc(file, stats) {
     if (stats.isDirectory()) {

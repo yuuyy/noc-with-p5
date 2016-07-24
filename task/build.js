@@ -3,7 +3,7 @@ var path = require('path');
 
 var browserify = require('browserify');
 
-var eachSrc = require('./each-src');
+var eachSrc = require('./build-util').eachSrc;
 
 function ignoreFunc(file, stats) {
     if (stats.isDirectory()) {
