@@ -1,0 +1,31 @@
+{
+  "name": "noc-with-p5",
+  "version": "1.0.0",
+  "description": "try noc with p5.js",
+  "scripts": {
+    "start": "node app.js",
+    "build-js": "node task/build.js",
+    "build-html": "node task/build-html.js",
+    "copy": "node task/copy.js",
+    "build": "npm run build-js && npm run build-html && npm run copy",
+    "rebuild": "npm run cleanup && npm run build",
+    "cleanup": "node task/cleanup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yuuyy",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "express": "^4.14.0",
+    "gaussian": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "mustache": "^2.2.1",
+    "p5": "^0.5.2",
+    "recursive-readdir": "^2.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.3",
+    "watchify": "^3.7.0"
+  }
+}
