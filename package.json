@@ -25,6 +25,7 @@
     "recursive-readdir": "^2.0.0"
   },
   "devDependencies": {
+    "minimist": "^1.2.0",
     "rimraf": "^2.5.3",
     "watchify": "^3.7.0"
   }
