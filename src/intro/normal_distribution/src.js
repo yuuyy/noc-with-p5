@@ -4,12 +4,14 @@ var gaussian = require('gaussian');
 function sketch(p) {
     var distribution;
     p.setup = function() {
-        p.createCanvas(640, 360);
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        p.createCanvas(width, height);
         p.background(0);
         var sd = 60;
-        xDistribution = new gaussian(320, sd*sd);
-        yDistribution = new gaussian(200, sd*sd);
-        colorDistribution = new gaussian(110, sd*sd);
+        xDistribution = new gaussian(width/2, sd*sd);
+        yDistribution = new gaussian(width/3, sd*sd);
+        colorDistribution = new gaussian(120, sd*sd);
     };
 
     p.draw = function() {

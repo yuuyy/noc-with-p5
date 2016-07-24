@@ -27,7 +27,7 @@ function sketch(p) {
     var distribution;
     var w;
     p.setup = function() {
-        p.createCanvas(640, 320);
+        p.createCanvas(window.innerWidth, window.innerHeight);
         p.background(255);
         distribution = new gaussian(1, 2)
         w = new Walker();

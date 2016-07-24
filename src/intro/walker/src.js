@@ -25,6 +25,7 @@ function sketch(p) {
 
     var w;
     p.setup = function() {
+        p.createCanvas(window.innerWidth, window.innerHeight);
         p.background(255);
         w = new Walker();
     };
